@@ -48,7 +48,7 @@ exports.handler = (event, context, callback) => {
 
     // converts the event to a valid JSON object with the sufficient infomation required
     function parseEvent(logEvent, logGroupName, logStreamName) {
-        var theMessage = logEvent.message.substring(0, logEvent.message.length - 1);
+        var theMessage = logEvent.message.substring(0, logEvent.message.length);
         return {
             message: theMessage,
             logGroupName,
